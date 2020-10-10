@@ -1,0 +1,355 @@
+.leftside, .rightside, .center{
+	height: 50vh;
+	width:100%;
+
+}
+
+@media screen and (min-width: 768px){
+	.leftside, .rightside, .center{
+	height: 100vh;
+
+}
+}
+
+.leftside{
+	background: white;
+	background-image: url('../images/towers.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+
+}
+
+
+
+.rightside{
+	background: white;
+	background-image: url('../images/towers_painted.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+
+}
+
+.center{
+	background:solid black;
+	background-image: url('../images/face_site.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+
+
+
+}
+.navbar-brand
+{
+	width: 100%;
+    text-align: center;
+}
+
+#buttonc{
+    position:relative;
+    transition: .5s ease;
+    left: 1170px;
+    top: -35px;
+}
+
+.navbar{
+	height: 70px;
+}
+
+button{
+	background-color: #716c87;
+	margin-top: -10px;
+}
+
+h2{
+	color:transparent;
+}
+
+input{
+	align-content: center;
+}
+
+input[type="file"] {
+    display:none
+}
+
+label.charge{
+  background-color: #333333;
+  border-radius: 25px;
+  color: #fff;
+  height: 35px;
+  cursor: pointer;
+  margin-left:122px;
+  text-align: center;
+  margin-top:100px;
+  width: 200px;
+  line-height: 32px;
+  box-shadow: inset 2px 2px 5px black, 2px 2px 5px black;
+
+}
+
+.hide {
+  margin-left: auto;
+  margin-right: auto;
+  height: 275px;
+  width: 50%;
+  display: block;
+
+}
+
+input[type="radio"] {
+        visibility: hidden;
+
+}
+    
+label.radio {
+    display: block;
+    border: 10px solid #666;
+    width: 100px;
+    float: left;
+    align-content: center;
+}
+
+input[type="radio"]:checked+label {
+    border-color: #ccf;
+
+}
+
+#l1{
+	margin-left: 45px;
+	margin-top:173px;
+	border-radius: 12px;
+	height: 100px;
+}
+
+#l2{
+	margin-left: 180px;
+	margin-top:150px;
+	border-radius: 12px;
+	height: 100px;
+
+
+}
+
+#l3{
+	margin-left: 40px;
+	margin-top:100px;
+	margin-right: 10px;
+	border-radius: 12px;
+	height: 100px;
+
+
+}
+
+#l4{
+	margin-left: 175px;
+	margin-top:100px;
+	border-radius: 12px;
+	height: 100px;
+
+
+}
+
+.img1{
+	height:80px;
+	width:80px;
+}
+
+.img2{
+	height:80px;
+	width:80px;
+}
+
+.img3{
+	height:80px;
+	width:80px;
+}
+
+.img4{
+	height:80px;
+	width:80px;
+}
+
+h5{
+	color: transparent;
+}
+
+.download{
+  background-color: #333333;
+  border-radius: 25px;
+  color: #fff;
+  height: 35px;
+  cursor: pointer;
+  margin-left:122px;
+  text-align: center;
+  margin-top:99px;
+  width: 200px;
+  line-height: 5px;
+  box-shadow: inset 2px 2px 5px black, 2px 2px 5px black;
+  border-style: solid;
+  border:none;
+  outline: none;
+}
+
+body{
+      overflow: hidden;
+    }
+
+#click-here{
+	display:none;
+}
+
+h4{
+	text-align: center;
+	color: #FFFFFF;
+	font-family: Arial, Serif;;
+	font-weight: 150;
+	font-size: 25px;
+}
+
+.h4-style{
+	background-color: black;
+	margin-top: 5px;
+	background-image: url('../images/escolha_um_estilo.jpg');
+	background-size: cover;
+}
+
+#space{
+	background-color: black;
+	background-image: url('../images/center.jpg');
+}
+
+#dummyframe{
+	display:none;
+}
+
+.output {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top:26px;
+  height: 275px;
+  width: 50%;
+  display: block;
+
+}
+
+
+/*------------------------------------Estilo Mobile--------------------------------------------------------------*/
+@media screen and (max-width: 750px) 
+{
+
+.leftside, .rightside, .center{
+	height: 100vh;
+	width:100%;
+
+}
+
+
+label.charge{
+  background-color: #333333;
+  border-radius: 25px;
+  color: #fff;
+  height: 35px;
+  cursor: pointer;
+  margin-left:90px;
+  text-align: center;
+  margin-top:100px;
+  width: 200px;
+  line-height: 32px;
+  box-shadow: inset 2px 2px 5px black, 2px 2px 5px black;
+
+}
+
+label.radio {
+   	display: block;
+    border: 7px solid #666;
+    width: 83px;
+    height: 2em;
+    margin-right: 20px;
+    align-content: center;
+}
+
+#l1{
+	margin-left: 20px;
+	margin-top: 170px;
+
+
+}
+
+#l2{
+	margin-top: 150px;
+	margin-left: 120px;
+	margin-right: 10px;
+
+}
+
+#l3{
+	margin-left: 20px;
+	margin-top: 50px;
+}
+
+#l4{
+	margin-top: 50px;
+	margin-left: 120px;
+	margin-right: 0px;
+}
+
+.img1{
+	height:87px;
+	width:70px;
+}
+
+.img2{
+	height:87px;
+	width:70px;
+}
+
+.img3{
+	height:87px;
+	width:70px;
+}
+
+.img4{
+	height:87px;
+	width:70px;
+}
+
+section {
+    min-height: 100vh; /* minus the height of the footer */
+}
+
+.download{
+  background-color: #333333;
+  border-radius: 25px;
+  color: #fff;
+  height: 35px;
+  cursor: pointer;
+  margin-left:90px;
+  text-align: center;
+  margin-top:99px;
+  width: 200px;
+  line-height: 5px;
+  box-shadow: inset 2px 2px 5px black, 2px 2px 5px black;
+  border-style: solid;
+  border:none;
+  outline: none;
+}
+
+.navbar-brand
+{
+	width: 100%;
+    text-align: center;
+}
+
+h3{
+	font-size: 25px;
+	margin-left: center;
+}
+
+#buttonc{
+    display:hidden;
+}
+
+}

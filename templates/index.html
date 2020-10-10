@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Transformacion</title>
+  <!-- jQuery script-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+  <link rel = "stylesheet" href = "{{ url_for('static', filename= 'css/style.css') }}">
+</head>
+<section>
+<body>
+  <nav class="navbar navbar-dark bg-dark">
+    <a class="navbar-brand" href = "#"><h3>Transformacion</h3></a>
+    <div id = "buttonc">
+      <a href="https://github.com/joaoottavioc"  target="_blank">
+      <button type = "button" class = "btn btn-default "><img src = "{{ url_for('static', filename= 'images/github-icon.png') }}"> Github</button>
+      </a>
+    </div>
+  </nav>
+  <div class = "row no-gutters">
+    <div class = "col-md-4 no gutters">
+      <div class = "leftside">
+           <form method="post" action="/" enctype="multipart/form-data" id= "FormRefresh">
+              <dl>
+                  <p>
+                      <input type="file" name="file" autocomplete="off" required onchange="form.submit()" id = "chargeb">
+                      <label for = "chargeb" class = "charge">Carregue uma imagem</label>
+                  </p>
+              </dl>
+          </form> 
+          <div>
+              <img id = "input" src="{{ url_for('display_image', filename=filename) }}" onerror="this.style.display='none'" alt = " " class = "hide">
+          </div>
+              
+      </div>
+    </div>
+    <div class = "col-md-4 no gutters">
+      <div class = "center">
+          <iframe name="dummyframe" id="dummyframe"></iframe>
+          <form action = "/model" method="post" target="dummyframe" enctype="multipart/form-data" id = "form-model">
+          <input type="radio" name="model" id="i1" value = "model1" required/>
+          <label id = "l1" class = "radio" for="i1">
+            <img class = "img1" src="{{ url_for('static', filename= 'images/estilo_cubista.jpg') }}" alt="">
+          </label>
+          <input type="radio" name="model" id="i2" value = "model2" required/>
+          <label id = "l2" class = "radio" for="i2">
+            <img class = "img2" src="{{ url_for('static', filename= 'images/estilo_modernista.jpg') }}" alt="">
+          </label>
+          <input type="radio" name="model" id="i3" value = "model3" required/>
+          <label id = "l3" class = "radio" for="i3">
+            <img class = "img3" src="{{ url_for('static', filename= 'images/estilo_mosaic.jpg') }}" alt="">
+          </label>
+          <input type="radio" name="model" id="i4" value = "model4" required/>
+          <label id = "l4" class = "radio" for="i4">
+            <img class = "img4" src="{{ url_for('static', filename= 'images/estilo_vangog.jpeg') }}" alt="">
+          </label>
+          </form>
+      </div>
+    </div>
+    <div class = "col-md-4 no gutters">
+      <div class = "rightside">
+      <form id = "difForm" method="post" action="/" enctype="multipart/form-data">
+              <dl>
+                  <p>
+                     <input form = "form-model" required onchange="form.submit()" onClick = "doStuff()" class = "download" type = "submit" value="Transforme"></input>
+                  </p>
+              </dl>
+      </form>
+      <div id = "divId">
+      </div>
+      <button id = "click-here" onclick="render()">visualizar</button>
+    <script>
+    document.getElementById("file").onchange = function() {
+    document.getElementById("form").submit();
+      };
+    </script>
+    <script type="text/javascript">
+    window.setInterval(function(){document.getElementById("click-here").click()}, 500);
+
+     function render(){
+    document.getElementById("divId").innerHTML = `<img id = "my_image" src="{{ url_for('static', filename = 'stylized_images/' + output_filename) }}" class="output" alt = " " onerror="this.style.display='none'">`
+    console.log('rendered');
+    }
+
+    </script>
+      </div>
+    </div>
+  </div>
+  <script
+  src="https://code.jquery.com/jquery-3.5.1.slim.js"
+  integrity="sha256-DrT5NfxfbHvMHux31Lkhxg42LY6of8TaYyK50jnxRnM="
+  crossorigin="anonymous"></script> 
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename= 'js/main.js') }}"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+  
+    <!-- our own contact JS script -->
+    <!-- necessary script to execute jQuery code -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+
+    <!-- jQuery validation is not included in the script above, so needs to be explicitly included -->
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+</body>
+</section>
+<footer>
+</footer>
+</html>
