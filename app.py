@@ -24,7 +24,6 @@ from flask import send_file
 UPLOAD_FOLDER = 'static/uploads/'
 
 app = Flask(__name__)
-app.secret_key = 'fa754a66-ab6d-4e26-ba9c-454547e97dc6'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024
 app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
