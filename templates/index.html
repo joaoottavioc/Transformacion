@@ -2,14 +2,9 @@
 <html>
 <head>
   <title>Transformacion</title>
-  <!-- jQuery script-->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <!--Let browser know website is optimized for mobile-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-
   <link rel = "stylesheet" href = "{{ url_for('static', filename= 'css/style.css') }}">
 </head>
 <section>
@@ -75,11 +70,15 @@
       </div>
       <button id = "click-here" onclick="render()">visualizar</button>
     <script>
+      //Define função client side para upload automático da imagem submetida pelo usuário
     document.getElementById("file").onchange = function() {
     document.getElementById("form").submit();
       };
     </script>
     <script type="text/javascript">
+      /*Define função client side render() que atualiza o conteúdo da div com id = "divId"
+        a cada 500 ms para mostrar a imagem estilizada no momento em que o processamento
+        termina (pretende-se encontrar um modo mais adequado de conseguir tal efeito)*/
     window.setInterval(function(){document.getElementById("click-here").click()}, 500);
 
      function render(){
@@ -98,12 +97,7 @@
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script type="text/javascript" src="{{ url_for('static', filename= 'js/main.js') }}"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
-  
-    <!-- our own contact JS script -->
-    <!-- necessary script to execute jQuery code -->
     <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
-
-    <!-- jQuery validation is not included in the script above, so needs to be explicitly included -->
     <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 </body>
