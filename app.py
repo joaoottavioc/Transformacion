@@ -82,7 +82,7 @@ def upload_image():
     return redirect(request.url, is_processed=is_processed, code=301)
 
 #Define a submissão dos parâmetros para o script neural_style.py (imagem submetida pelo usuário e estilo escolhido)
-#sendo que o estilo é determinado através do formulário "model" e a identificação deste último parâmtro com a imagem
+#sendo que o estilo é determinado através do formulário "model" e a identificação deste último parâmetro com a imagem
 #submetida é mais uma vez determinada pelo Id da sessão (session['id'])
 @app.route('/model', methods=['POST'])
 def model_name():
