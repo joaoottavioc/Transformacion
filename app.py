@@ -31,7 +31,7 @@ ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg'])
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
-#Define a URL de inicialização do aplicativo com a criação de im Id único para cada sessão (session['id'])
+#Define a URL de inicialização do aplicativo com a criação de um Id único para cada sessão (session['id'])
 #que tem por objetivo a identificação dos parâmetros submetidos pelo usuário para posterior processamento
 @app.route('/')
 def upload_form():
