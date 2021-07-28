@@ -23,6 +23,9 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024
 app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 
+port = int(os.environ.get('PORT', 8000))
+
+
 
 
 ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg'])
@@ -114,4 +117,4 @@ def display_image(filename):
 
 
 if __name__ == "__main__":
-    app.run(threaded=True)
+    app.run(threaded=True, port=port)
