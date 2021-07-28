@@ -1,3 +1,4 @@
+-f https://download.pytorch.org/whl/torch_stable.html
 cachelib==0.2.0
 certifi==2021.5.30
 click==8.0.1
@@ -9,8 +10,9 @@ Jinja2==3.0.1
 MarkupSafe==2.0.1
 numpy==1.21.1
 Pillow==8.3.1
-torch==1.9.0
-torchvision==0.10.0
+torch==1.8.1+cpu
+torchaudio==0.8.1
+torchvision==0.9.1+cpu
 typing-extensions==3.10.0.0
 Werkzeug==2.0.1
 wincertstore==0.2
