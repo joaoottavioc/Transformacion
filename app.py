@@ -90,13 +90,15 @@ def model_name():
     model = session['id'] + "-" + model
     for each in os.scandir(UPLOAD_FOLDER):
         if str(each.name)[0:16] == str(model)[0:16]:
+            print("innere")
             temp_dict = {'filename':each.name, 'model':model, 'time': datetime.datetime.now()}
-            os.system("python3 neural_style/neural_style.py eval --content-image " + "static/uploads/" + str(temp_dict['filename']) +  " --model " +  "saved_models/" + str(temp_dict['model'][-6:]) + ".pth" + " --output-image " + "static/stylized_images/" + str(session['id']) + "-output.jpg" + " --cuda 0")
+            os.system("python neural_style/neural_style.py eval --content-image " + "static/uploads/" + str(temp_dict['filename']) +  " --model " +  "saved_models/" + str(temp_dict['model'][-6:]) + ".pth" + " --output-image " + "static/stylized_images/" + str(session['id']) + "-output.jpg" + " --cuda 0")
             is_processed =  {'var1':'not_processed_yet', 'var2':'processed'}
             output_filename = str(session['id']) + "-output.jpg"
             output = {'output_filename': output_filename, 'test': 'test'}
             reuploaded = {'reuploaded': 'false'}
         else:
+            print("raus")
             print('Counting other files')
     return render_template('index.html', is_processed=is_processed, output_filename=output_filename, output = output, reuploaded=reuploaded)
 
